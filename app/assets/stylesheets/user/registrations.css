@@ -1,0 +1,133 @@
+.form-wrap {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.form-header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.form-header-text {
+  line-height: 100px;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 40px;
+  padding: 5px 10px 10px;
+  border: 1px solid black;
+  background: white;
+  font-size: 15px;
+  resize: none;
+}
+
+.info-text {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.form-info-text {
+  font-size: 15px;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px 5px 10px;
+  border: 1px solid black;
+  background: white;
+  font-size: 14px;
+  resize: none;
+}
+
+.input-birth-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap>select {
+  width: 80px;
+  margin-top: 5px;
+  height: 50px;
+  padding-left: 10px;
+  border: 1px solid black;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.input-birth-wrap>p {
+  line-height: 50px;
+  padding: 0 5px;
+}
+
+.form-bottom-text {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-bottom-text:last-child {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.register-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.register-blue-btn {
+  width: 100%;
+  background: blue;
+  color: white;
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.error-alert {
+  text-align: center;
+  color: red;
+}
+
+.error-message {
+  text-align: center;
+  color: red;
+}
