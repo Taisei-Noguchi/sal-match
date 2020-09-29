@@ -25,13 +25,13 @@ tweetsテーブル
 | Column          | Type        | Options                       |
 | --------------- | ----------- | ----------------------------- |
 | title           | string      | null: false                   |
-| prefectures_id  | integer     | null: false                   |
 | place           | string      | null: false                   |
+| price           | string      | null: false                   |
+| detail          | string      | null: false                   |
+| prefectures_id  | integer     | null: false                   |
 | field_id        | integer     | null: false                   |
 | category_id     | integer     | null: false                   |
 | level_id        | integer     | null: false                   |
-| price           | string      | null: false                   |
-| detail          | string      | null: false                   |
 | user            | references  | null: false, foreign_key:true |
 
 - has_many :comments
