@@ -1,0 +1,89 @@
+<div class="post_field">
+  <div class="post_center">
+    <h1 class="post_title">投稿する</h1>
+  </div>
+  <%= form_with model: @item,local: true do |f| %>
+
+    <%# エラー文 %>
+
+    <%# 投稿画像 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>投稿画像</div>
+        <p><%= f.file_field :image, id:"post-image" %></p>
+      </div>
+    </div>
+
+    <%# タイトル %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>タイトル</div>
+        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+      </div>
+    </div>
+
+    <%# 場所 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>場所</div>
+        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+      </div>
+    </div>
+
+    <%# 金額 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>参加費</div>
+        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+      </div>
+    </div>
+
+    <%# 備考 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>備考</div>
+        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+      </div>
+    </div>
+
+    <%# 都道府県 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>都道府県</div>
+        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> %>
+      </div>
+    </div>
+
+    <%# フィールド %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>フィールド</div>
+        <%# <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %> %>
+      </div>
+    </div>
+
+        <%# カテゴリー %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>カテゴリー</div>
+        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> %>
+      </div>
+    </div>
+
+    <%# レベル %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>レベル</div>
+        <%# <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %> %>
+      </div>
+    </div>
+
+
+  <%# 投稿ボタン %>
+  <div class="post_btn_area">
+    <%= f.submit "投稿する" ,class:"post_btn" %>
+  </div>
+  
+  
+  <% end %>
+</div>
