@@ -214,6 +214,14 @@ a {
   background-color: tomato;
 }
 
+.tweet_list {
+  width: 700px;
+}
+
+.list {
+  list-style: none;
+}
+
 /* ここから投稿ページ */
 .post_field {
   width: 100vw;

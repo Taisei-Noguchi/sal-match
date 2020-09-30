@@ -1,42 +1,46 @@
 <div class="tweet">
-
-  <div class="tweets">
-    <div class="tweet_page">
-      <div class="tweet_image">
-        <%# <%= image_tag @tweet.image, class "tweet-image" if @tweet.image.attached?%> %>
-        <div class="detail_btn_area">
-          <div class="detail_btn">
+  <ul class="tweet_list">
+  <% if @tweets.present? %>
+  <% @tweets.each do |tweet| %>
+    <li class="list">
+      <div class="tweets">
+        <div class="tweet_page">
+          <div class="tweet_image">
+            <%= image_tag tweet.image.variant(resize:'400x500'), class: 'tweet-image' %>
+            <div class="detail_btn_area">
+              <div class="detail_btn">
           
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="tweet_content">
+            <div class="tweet_title">
+              <%= tweet.title %>
+            </div>
+            <div class="tweet_prefectures_id">
+              <%= tweet.prefecture.name %>
+            </div>
+            <div class="tweet_place">
+              <%= tweet.place %>
+            </div>
+            <div class="tweet_field_id">
+              <%= tweet.field.name %>
+            </div>
+            <div class="tweet_level_id">
+              <%= tweet.level.name %>
+            </div>
+            <div class="tweet_price">
+              <%= tweet.price %>
+            </div>
+            <div class="tweet_detail">
+              <%= tweet.detail %>
+            </div>
+          </div>
+        <div>
       </div>
-      <div class="tweet_content">
-        <div class="tweet_title">
-          <%# <%= @tweet.title %> %>
-        </div>
-        <div class="tweet_prefectures_id">
-          <%# <%= @tweet.prefectures.name %> %>
-        </div>
-        <div class="tweet_place">
-          <%# <%= @tweet.place %> %>
-        </div>
-        <div class="tweet_field_id">
-          <%# <%= @tweet.field.name %> %>
-        </div>
-        <div class="tweet_category_id">
-          <%# <%= @tweet.category.name %> %>
-        </div>
-        <div class="tweet_level_id">
-          <%# <%= @tweet.category.name %> %>
-        </div>
-        <div class="tweet_price">
-          <%# <%= @tweet.field.name %> %>
-        </div>
-        <div class="tweet_detail">
-          <%# <%= @tweet.field.name %> %>
-        </div>
-      </div>
-    <div>
-  </div>
+      <% end %>
+      <% end %>
+    </li>
+  </ul>
 
 </div>

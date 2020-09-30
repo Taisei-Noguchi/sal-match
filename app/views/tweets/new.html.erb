@@ -2,9 +2,9 @@
   <div class="post_center">
     <h1 class="post_title">投稿する</h1>
   </div>
-  <%= form_with model: @item,local: true do |f| %>
+  <%= form_with model: @tweets, url: "/tweet/new", method: :post, local: true do |f| %>
 
-    <%# エラー文 %>
+     <%# <%= render 'shared/error_messages', model: f.object %> %>
 
     <%# 投稿画像 %>
     <div class="post_center">
@@ -18,7 +18,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>タイトル</div>
-        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+        <p><%= f.text_area :title, class:"post_text_box", id:"item-name", placeholder:"全角", maxlength:"15" %></p>
       </div>
     </div>
 
@@ -26,7 +26,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>場所</div>
-        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+        <p><%= f.text_area :place, class:"post_text_box", id:"item-name", placeholder:"全角",maxlength:"15" %></p>
       </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>参加費</div>
-        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+        <p><%= f.text_area :price, class:"post_text_box", id:"item-name", placeholder:"半角数字 無料なら０と記入",maxlength:"15" %></p>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>備考</div>
-        <p><%= f.text_area :name, class:"post_text_box", id:"item-name", placeholder:"必須 40文字まで", maxlength:"40" %></p>
+        <p><%= f.text_area :detail, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
       </div>
     </div>
 
@@ -50,7 +50,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>都道府県</div>
-        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> %>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
       </div>
     </div>
 
@@ -58,15 +58,7 @@
     <div class="post_center">
       <div class="post_text">
         <div>フィールド</div>
-        <%# <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %> %>
-      </div>
-    </div>
-
-        <%# カテゴリー %>
-    <div class="post_center">
-      <div class="post_text">
-        <div>カテゴリー</div>
-        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> %>
+        <%= f.collection_select(:field_id, Field.all, :id, :name, {}, {class:"select-box", id:"item-field"}) %>
       </div>
     </div>
 
@@ -74,15 +66,15 @@
     <div class="post_center">
       <div class="post_text">
         <div>レベル</div>
-        <%# <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %> %>
+        <%= f.collection_select(:level_id, Level.all, :id, :name, {}, {class:"select-box", id:"item-level"}) %>
       </div>
     </div>
 
 
-  <%# 投稿ボタン %>
-  <div class="post_btn_area">
-    <%= f.submit "投稿する" ,class:"post_btn" %>
-  </div>
+    <%# 投稿ボタン %>
+    <div class="post_btn_area">
+      <%= f.submit "投稿する" ,class:"post_btn" %>
+    </div>
   
   
   <% end %>
