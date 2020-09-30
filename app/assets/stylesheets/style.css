@@ -1,3 +1,4 @@
+/* リセットCSS */
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -57,8 +58,8 @@ a {
     vertical-align:baseline;
     background:transparent;
 }
-/* ここまでがリセットCSS */
 
+/* ここからヘッダー */
 .header {
   width: 100vw;
   background-color: blue;
@@ -73,7 +74,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .page_title {
@@ -105,4 +105,162 @@ a {
   background-color: black;
   text-decoration: none;
 }
+
+/* ここからトップページ */
+.tweet {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  background-color:white;
+}
+
+.tweets {
+  width: 90%;
+  height: 300px;
+  margin: 20px;
+  border: 5px solid black;
+  background-color: white;
+  display: block;
+}
+
+.tweet_page {
+  display: flex;
+}
+
+.tweet_image {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: turquoise;
+}
+
+.tweet_content {
+  width: 100%;
+  background-color: yellow;
+}
+
+.tweet_title {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+}
+
+.tweet_prefectures_id {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+}
+
+.tweet_place {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:yellowgreen;
+}
+
+.tweet_field_id {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+}
+
+.tweet_category_id {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+}
+
+.tweet_level_id {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+}
+
+.tweet_price {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:yellowgreen;
+}
+
+.tweet_detail {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+}
+
+.tweet_list {
+  width: 700px;
+}
+
+.list {
+  list-style: none;
+}
+
+/* ここから投稿ページ */
+.post_field {
+  width: 100vw;
+}
+
+.post_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.post_title {
+  font-size: 30px;
+}
+
+.post_text {
+  width: 500px;
+}
+
+.post_text_box {
+  width: 100%;
+  height: 20px;
+}
+
+/* 投稿ボタン */
+.post_btn_area {
+  width: 100vw;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post_btn {
+  background: blue;
+  color:white;
+  width: 40%;
+  height: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
 
