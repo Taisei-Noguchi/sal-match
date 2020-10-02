@@ -1,1 +1,89 @@
-<h1>aiueo</h1>
+<div class="post_field">
+  <div class="post_center">
+    <h1 class="post_title">編集</h1>
+  </div>
+  <%= form_with model: @tweets, local: true do |f| %>
+
+     <%= render 'shared/error_messages', model: @tweets %>
+
+    <%# 投稿画像 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>投稿画像 （末尾が.pngの画像）</div>
+        <p><%= f.file_field :image, id:"post-image" %></p>
+      </div>
+    </div>
+
+    <%# タイトル %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>タイトル</div>
+        <p><%= f.text_area :title, class:"post_text_box", id:"item-name", placeholder:"全角", maxlength:"15" %></p>
+      </div>
+    </div>
+
+    <%# 会場 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>会場</div>
+        <p><%= f.text_area :place, class:"post_text_box", id:"item-name", placeholder:"全角",maxlength:"15" %></p>
+      </div>
+    </div>
+
+    <%# 金額 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>参加費</div>
+        <p><%= f.text_area :price, class:"post_text_box", id:"item-name", placeholder:"半角数字 無料なら０と記入",maxlength:"15" %></p>
+      </div>
+    </div>
+
+    <%# 注意事項 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>注意事項</div>
+        <p><%= f.text_area :detail, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
+      </div>
+    </div>
+
+    <%# カテゴリー %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>カテゴリー</div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+    </div>
+
+    <%# 都道府県 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>都道府県</div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+      </div>
+    </div>
+
+    <%# フィールド %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>フィールド</div>
+        <%= f.collection_select(:field_id, Field.all, :id, :name, {}, {class:"select-box", id:"item-field"}) %>
+      </div>
+    </div>
+
+    <%# レベル %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>レベル</div>
+        <%= f.collection_select(:level_id, Level.all, :id, :name, {}, {class:"select-box", id:"item-level"}) %>
+      </div>
+    </div>
+
+
+    <%# 投稿ボタン %>
+    <div class="post_btn_area">
+      <%= f.submit "編集完了" ,class:"post_btn" %>
+    </div>
+  
+  
+  <% end %>
+</div>

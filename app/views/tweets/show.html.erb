@@ -2,6 +2,11 @@
 <div class="select_btn">
 <%= link_to '編集', edit_tweet_path, method: :get, class: "edit_btn" %>
 <%= link_to '削除', tweet_path, method: :delete, class:"destroy_btn" %>
+<%= link_to '戻る', root_path, class:"return_btn" %>
+</div>
+<% else %>
+<div class="select_btn">
+<%= link_to '戻る', root_path, class:"return_btn" %>
 </div>
 <% end %>
 <div class="tweet">

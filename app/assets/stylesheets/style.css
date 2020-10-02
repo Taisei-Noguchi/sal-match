@@ -313,3 +313,13 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.return_btn {
+  padding: 10px 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
