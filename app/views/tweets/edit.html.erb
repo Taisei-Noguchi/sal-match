@@ -1,10 +1,10 @@
 <div class="post_field">
   <div class="post_center">
-    <h1 class="post_title">投稿する</h1>
+    <h1 class="post_title">編集</h1>
   </div>
-  <%= form_with model: @tweets, url: "/tweet/new", method: :post, local: true do |f| %>
+  <%= form_with model: @tweets, local: true do |f| %>
 
-     <%= render 'shared/error_messages', model: f.object %>
+     <%= render 'shared/error_messages', model: @tweets %>
 
     <%# 投稿画像 %>
     <div class="post_center">
@@ -81,7 +81,7 @@
 
     <%# 投稿ボタン %>
     <div class="post_btn_area">
-      <%= f.submit "投稿する" ,class:"post_btn" %>
+      <%= f.submit "編集完了" ,class:"post_btn" %>
     </div>
   
   

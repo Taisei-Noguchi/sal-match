@@ -1,46 +1,61 @@
 <div class="tweet">
+  <%# <img src=”URL” alt=”文字” class=”セレクタ”> %>
+  <%# <div class="detail_btn_area">
+    <div class="detail_btn">
+      カテゴリー
+    </div>
+  </div> %>
   <ul class="tweet_list">
+  
   <% if @tweets.present? %>
   <% @tweets.each do |tweet| %>
     <li class="list">
       <div class="tweets">
+        
         <div class="tweet_page">
+          <%= link_to tweet_path(@tweets.ids) do %>
           <div class="tweet_image">
-            <%= image_tag tweet.image.variant(resize:'400x500'), class: 'tweet-image' %>
-            <div class="detail_btn_area">
-              <div class="detail_btn">
-          
-              </div>
-            </div>
+            <%= image_tag tweet.image.variant(resize:'300x300'), class: 'tweet-image' %>
           </div>
+          <% end %>
           <div class="tweet_content">
             <div class="tweet_title">
               <%= tweet.title %>
             </div>
+            <div class="tweet_category_id">
+              <span>カテゴリー：</span>
+              <%= tweet.category.name %>
+            </div>
             <div class="tweet_prefectures_id">
+              <span>都道府県：</span>
               <%= tweet.prefecture.name %>
             </div>
             <div class="tweet_place">
+              <span>会場：</span>
               <%= tweet.place %>
             </div>
             <div class="tweet_field_id">
+              <span>環境：</span>
               <%= tweet.field.name %>
             </div>
             <div class="tweet_level_id">
+              <span>レベル：</span>
               <%= tweet.level.name %>
             </div>
             <div class="tweet_price">
+              <span>参加費：￥</span>
               <%= tweet.price %>
             </div>
             <div class="tweet_detail">
+              <span>注意事項：</span>
               <%= tweet.detail %>
             </div>
           </div>
-        <div>
+        </div>
+        
       </div>
-      <% end %>
-      <% end %>
     </li>
+  <% end %>
+  <% end %>
   </ul>
-
 </div>
