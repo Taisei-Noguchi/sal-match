@@ -109,18 +109,18 @@ a {
 /* ここからトップページ */
 .tweet {
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   overflow: scroll;
-  background-color:white;
+  background-color: rgb(226, 226, 228);
 }
 
 .tweets {
   width: 90%;
-  height: 300px;
+  height: 280px;
   margin: 20px;
   border: 5px solid black;
-  background-color: white;
   display: block;
 }
 
@@ -129,97 +129,118 @@ a {
 }
 
 .tweet_image {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 281px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: turquoise;
+  background-color: black;
 }
 
 .tweet_content {
   width: 100%;
-  background-color: yellow;
+  background-color: white;
+  padding-bottom:1px;
+  text-decoration: none;
 }
 
 .tweet_title {
   width: 100%;
   height: 35px;
+  margin-left: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color: yellowgreen;
-}
-
-.tweet_prefectures_id {
-  width: 100%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: tomato;
-}
-
-.tweet_place {
-  width: 100%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:yellowgreen;
-}
-
-.tweet_field_id {
-  width: 100%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: tomato;
 }
 
 .tweet_category_id {
   width: 100%;
   height: 35px;
+  margin-left: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color: yellowgreen;
+}
+
+.tweet_prefectures_id {
+  width: 100%;
+  height: 35px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.tweet_place {
+  width: 100%;
+  height: 35px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.tweet_field_id {
+  width: 100%;
+  height: 35px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .tweet_level_id {
   width: 100%;
   height: 35px;
+  margin-left: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color: tomato;
 }
 
 .tweet_price {
   width: 100%;
   height: 35px;
+  margin-left: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color:yellowgreen;
+  
 }
 
 .tweet_detail {
   width: 100%;
   height: 35px;
+  margin-left: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color: tomato;
 }
 
 .tweet_list {
   width: 700px;
+  
 }
 
 .list {
   list-style: none;
+  
+}
+
+.tweet_btn_area {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: teal;
+}
+
+.tweet_btn {
+  width: 100%;
+  background: blue;
+  color: white;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 /* ここから投稿ページ */
@@ -263,4 +284,32 @@ a {
   cursor: pointer;
 }
 
+/* ここから詳細ページ */
+.select_btn {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(226, 226, 228);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+.edit_btn {
+  padding: 10px 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.destroy_btn {
+  padding: 10px 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

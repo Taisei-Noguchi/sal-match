@@ -28,6 +28,7 @@ tweetsテーブル
 | place           | string      | null: false                   |
 | price           | string      | null: false                   |
 | detail          | string      | null: false                   |
+| category        | integer     | null: false                   |
 | prefecture_id   | integer     | null: false                   |
 | field_id        | integer     | null: false                   |
 | level_id        | integer     | null: false                   |

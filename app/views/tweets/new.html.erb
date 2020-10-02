@@ -9,7 +9,7 @@
     <%# 投稿画像 %>
     <div class="post_center">
       <div class="post_text">
-        <div>投稿画像</div>
+        <div>投稿画像 （末尾が.pngの画像）</div>
         <p><%= f.file_field :image, id:"post-image" %></p>
       </div>
     </div>
@@ -22,10 +22,10 @@
       </div>
     </div>
 
-    <%# 場所 %>
+    <%# 会場 %>
     <div class="post_center">
       <div class="post_text">
-        <div>場所</div>
+        <div>会場</div>
         <p><%= f.text_area :place, class:"post_text_box", id:"item-name", placeholder:"全角",maxlength:"15" %></p>
       </div>
     </div>
@@ -38,11 +38,19 @@
       </div>
     </div>
 
-    <%# 備考 %>
+    <%# 注意事項 %>
     <div class="post_center">
       <div class="post_text">
-        <div>備考</div>
+        <div>注意事項</div>
         <p><%= f.text_area :detail, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
+      </div>
+    </div>
+
+    <%# カテゴリー %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>カテゴリー</div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
     </div>
 

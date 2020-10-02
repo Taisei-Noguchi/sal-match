@@ -1,0 +1,50 @@
+<% if user_signed_in? && current_user.id == @tweets.user_id%>
+<div class="select_btn">
+<%= link_to '編集', edit_tweet_path, method: :get, class: "edit_btn" %>
+<%= link_to '削除', tweet_path, method: :delete, class:"destroy_btn" %>
+</div>
+<% end %>
+<div class="tweet">
+  <div class="tweets">
+    <div class="tweet_page">
+      <div class="tweet_image">
+        <%= image_tag @tweets.image.variant(resize:'300x300'), class: 'tweet-image' %>
+      </div>
+      <div class="tweet_content">
+        <div class="tweet_title">
+           <%= @tweets.title %>
+        </div>
+         <div class="tweet_category_id">
+           <span>カテゴリー：</span>
+           <%= @tweets.category.name %>
+        </div>
+         <div class="tweet_prefectures_id">
+           <span>都道府県：</span>
+           <%= @tweets.prefecture.name %>
+         </div>
+         <div class="tweet_place">
+          <span>会場：</span>
+          <%= @tweets.place %>
+         </div>
+         <div class="tweet_field_id">
+           <span>環境：</span>
+          <%= @tweets.field.name %>
+        </div>
+        <div class="tweet_level_id">
+           <span>レベル：</span>
+           <%= @tweets.level.name %>
+        </div>
+        <div class="tweet_price">
+           <span>参加費：￥</span>
+           <%= @tweets.price %>
+         </div>
+         <div class="tweet_detail">
+           <span>注意事項：</span>
+           <%= @tweets.detail %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%# <div class="comment">
+</div> %>

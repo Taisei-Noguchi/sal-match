@@ -5,6 +5,7 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.string :place, null: false
       t.string :price, null: false
       t.string :detail, null: false
+      t.integer :category_id, null: false
       t.integer :prefecture_id, null: false
       t.integer :field_id, null: false
       t.integer :level_id, null: false
