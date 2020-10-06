@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: 'tweets#index'
   post '/tweet/new' => 'tweets#create'
   resources :users
-  resources :tweets
+  resources :tweets do
+    resources :comments
+  end
 end
