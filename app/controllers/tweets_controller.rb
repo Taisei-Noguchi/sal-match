@@ -1,18 +1,19 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @tweets = Tweet.order("created_at DESC")
   end
 
   def new
-    @tweets = Tweet.new
+    @tweet = Tweet.new
   end
 
   def create
-    @tweets = Tweet.create(tweet_params)
-    if @tweets.save
+    @tweet = Tweet.create(tweet_params)
+    if @tweet.save
       redirect_to root_path
     else
       render :new
@@ -20,7 +21,8 @@ class TweetsController < ApplicationController
   end
 
   def update
-    if @tweets.update(tweet_params)
+    tweet = Tweet.find(params[:id])
+    if tweet.update(tweet_params)
       redirect_to root_path
     else
       render :edit
@@ -28,7 +30,8 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    if @tweets.destroy
+    tweet = Tweet.find(params[:id])
+    if tweet.destroy
       redirect_to root_path
     else
       render :show
@@ -42,6 +45,12 @@ class TweetsController < ApplicationController
   end
 
   def set_item
-    @tweets = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end
