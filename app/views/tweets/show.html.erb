@@ -10,7 +10,7 @@
   </div>
 <% end %>
 
-<div class="tweet">
+<div class="tweet_show">
   <div class="tweet_image">
     <%= image_tag @tweet.image.variant(resize:'300x300'), class: 'tweet-image' %>
   </div>
@@ -48,5 +48,31 @@
     </div>
   </div>
 </div>
-<%# <div class="comment">
-</div> %>
+<div class="comment">
+  <% if current_user %>
+    <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+    <div>
+      <%= form.text_area :text, placeholder: "コメントする", rows: "2", class:"comment_form" %>
+    </div>
+    <div>
+      <%= form.submit "送信" , class:"comment_btn"%>
+    </div>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+    </strong>
+  <% end %>
+</div>
+<div class="comments">
+  <h4>コメント一覧</h4>
+  <br>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <p>
+        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"comment_name" %>：</strong>
+          <%= comment.text %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+
