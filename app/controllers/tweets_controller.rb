@@ -20,6 +20,11 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
+  end
+
   def update
     tweet = Tweet.find(params[:id])
     if tweet.update(tweet_params)
