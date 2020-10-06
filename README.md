@@ -1,5 +1,6 @@
 # README
 
+
 # テーブル設計
 
 usersテーブル
@@ -34,14 +35,20 @@ tweetsテーブル
 | level_id        | integer     | null: false                   |
 | user            | references  | null: false, foreign_key:true |
 
+Association
+
 - has_many :comments
 - belongs_to :user
 
 commentsテーブル
 
+| Column          | Type        | Options                       |
+| --------------- | ----------- | ----------------------------- |
 | comment         | text        | null: false                   |
 | user            | references  | null: false, foreign_key:true |
 | tweet           | references  | null: false, foreign_key:true |
+
+Association
 
 belongs_to :user
 belongs_to :tweet
