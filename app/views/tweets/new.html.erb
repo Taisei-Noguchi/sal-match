@@ -2,7 +2,7 @@
   <div class="post_center">
     <h1 class="post_title">投稿する</h1>
   </div>
-  <%= form_with model: @tweets, url: "/tweet/new", method: :post, local: true do |f| %>
+  <%= form_with model: @tweet, local: true do |f| %>
 
      <%= render 'shared/error_messages', model: f.object %>
 

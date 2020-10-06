@@ -13,7 +13,7 @@
       <div class="tweets">
         
         <div class="tweet_page">
-          <%= link_to tweet_path(@tweets.ids) do %>
+          <%= link_to tweet_path(tweet.id) do %>
           <div class="tweet_image">
             <%= image_tag tweet.image.variant(resize:'300x300'), class: 'tweet-image' %>
           </div>

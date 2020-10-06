@@ -2,9 +2,9 @@
   <div class="post_center">
     <h1 class="post_title">編集</h1>
   </div>
-  <%= form_with model: @tweets, local: true do |f| %>
+  <%= form_with model: @tweet, local: true do |f| %>
 
-     <%= render 'shared/error_messages', model: @tweets %>
+     <%= render 'shared/error_messages', model: @tweet %>
 
     <%# 投稿画像 %>
     <div class="post_center">
