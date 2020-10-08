@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 2020_10_06_124035) do
     t.integer "prefecture_id", null: false
     t.integer "field_id", null: false
     t.integer "level_id", null: false
+    t.integer "month_id", null: false
+    t.integer "day_id", null: false
+    t.integer "hour_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

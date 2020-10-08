@@ -4,12 +4,12 @@
   </div>
   <%= form_with model: @tweet, local: true do |f| %>
 
-     <%= render 'shared/error_messages', model: @tweet %>
+    <%= render 'shared/error_messages', model: @tweet %>
 
     <%# 投稿画像 %>
     <div class="post_center">
       <div class="post_text">
-        <div>投稿画像 （末尾が.pngの画像）</div>
+        <div>投稿画像 （末尾がjpeg、jpg、pngの画像）</div>
         <p><%= f.file_field :image, id:"post-image" %></p>
       </div>
     </div>
@@ -46,11 +46,13 @@
       </div>
     </div>
 
-    <%# カテゴリー %>
+    <%# 日時 %>
     <div class="post_center">
       <div class="post_text">
-        <div>カテゴリー</div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div>日時</div>
+        <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"item-month"}) %>
+        <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"select-box", id:"item-day"}) %>
+        <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"item-hour"}) %>
       </div>
     </div>
 
@@ -75,6 +77,14 @@
       <div class="post_text">
         <div>レベル</div>
         <%= f.collection_select(:level_id, Level.all, :id, :name, {}, {class:"select-box", id:"item-level"}) %>
+      </div>
+    </div>
+
+    <%# カテゴリー %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>カテゴリー</div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
     </div>
 

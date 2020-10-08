@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :first_kana,presence: true,format: { with: /\A[ァ-ヶー－]+\z/}
   validates :second_kana,presence: true,format: { with: /\A[ァ-ヶー－]+\z/}
   validates :birthday,presence: true
-       
+
   has_many :tweets
   has_many :comments
 end

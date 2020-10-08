@@ -4,13 +4,16 @@ class Tweet < ApplicationRecord
   has_many :comments
   belongs_to :user
   
-
   has_one_attached :image
 
   belongs_to_active_hash :category
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :field
   belongs_to_active_hash :level
+  belongs_to_active_hash :month
+  belongs_to_active_hash :day
+  belongs_to_active_hash :hour
+
 
   with_options presence: true do
     validates :image
@@ -24,6 +27,9 @@ class Tweet < ApplicationRecord
       validates :prefecture_id
       validates :field_id
       validates :level_id
+      validates :month_id
+      validates :day_id
+      validates :hour_id
     end
   end
 end
