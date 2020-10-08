@@ -1,6 +1,6 @@
 <div class="post_field">
   <div class="post_center">
-    <h1 class="post_title">投稿する</h1>
+    <h1 class="post_title">投稿ページ</h1>
   </div>
   <%= form_with model: @tweet, local: true do |f| %>
 
@@ -91,6 +91,7 @@
     <%# 投稿ボタン %>
     <div class="post_btn_area">
       <%= f.submit "投稿する" ,class:"post_btn" %>
+      <%= link_to '戻る', root_path, class:"return_btn" %>
     </div>
   
   
