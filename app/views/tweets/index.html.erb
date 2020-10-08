@@ -11,35 +11,43 @@
   <%= link_to tweet_path(tweet.id),class: "tweets" do %>
     <li class="list">
       <div class="tweet_image">
-        <%= image_tag tweet.image.variant(resize:'300x300'), class: 'tweet-image' %>
+        <%= image_tag tweet.image.variant(resize:'400x400'), class: 'tweet-image' %>
       </div>
       <div class="tweet_content">
         <div class="tweet_title">
           <%= tweet.title %>
         </div>
-        <div class="tweet_category_id">
-          <span>カテゴリー：</span>
-          <%= tweet.category.name %>
+        <div class="tweet_detail">
+          <span>日時：</span>
+          <%= tweet.month.name %>
+          <span>月</span>
+          <%= tweet.day.name %>
+          <span>日</span>
+          <%= tweet.hour.name %>
         </div>
-        <div class="tweet_prefectures_id">
+        <div class="tweet_detail">
           <span>都道府県：</span>
           <%= tweet.prefecture.name %>
         </div>
-        <div class="tweet_place">
+        <div class="tweet_detail">
           <span>会場：</span>
           <%= tweet.place %>
         </div>
-        <div class="tweet_field_id">
+        <div class="tweet_detail">
           <span>環境：</span>
           <%= tweet.field.name %>
         </div>
-        <div class="tweet_level_id">
+        <div class="tweet_detail">
+          <span>参加費：￥</span>
+          <%= tweet.price %>
+        </div>
+        <div class="tweet_detail">
           <span>レベル：</span>
           <%= tweet.level.name %>
         </div>
-        <div class="tweet_price">
-          <span>参加費：￥</span>
-          <%= tweet.price %>
+        <div class="tweet_detail">
+          <span>カテゴリー：</span>
+          <%= tweet.category.name %>
         </div>
         <div class="tweet_detail">
           <span>注意事項：</span>

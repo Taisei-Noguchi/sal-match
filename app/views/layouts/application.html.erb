@@ -11,13 +11,13 @@
   <body>
     <div class="header">
       <div class="header_left">
-        <div class="page_title">SalMatch</div>
+        <%= link_to "SalMatch", root_path, class: "SalMatch" %>
       </div>
       <div class="header_right">
         <ul class="header_list">
         <% if user_signed_in? %>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "button" %></li>
-          <li><%= link_to "投稿する", new_tweet_path, class: "button" %></li>
+          <li><%= link_to "投稿", new_tweet_path, class: "button" %></li>
         <% else %>
           <%= link_to "ログイン", new_user_session_path, class: "button" %>
           <%= link_to "新規登録", new_user_registration_path, class: "button" %>

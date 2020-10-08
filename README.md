@@ -104,6 +104,9 @@ tweetsテーブル
 | prefecture_id   | integer     | null: false                   |
 | field_id        | integer     | null: false                   |
 | level_id        | integer     | null: false                   |
+| month_id        | integer     | null: false                   |
+| day_id          | integer     | null: false                   |
+| hour_id         | integer     | null: false                   |
 | user            | references  | null: false, foreign_key:true |
 
 Association

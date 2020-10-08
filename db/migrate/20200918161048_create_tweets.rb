@@ -9,6 +9,9 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.integer :prefecture_id, null: false
       t.integer :field_id, null: false
       t.integer :level_id, null: false
+      t.integer :month_id, null: false
+      t.integer :day_id, null: false
+      t.integer :hour_id, null: false
       t.references :user, null: false, foreign_key:true
 
       t.timestamps
