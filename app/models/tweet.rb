@@ -14,7 +14,6 @@ class Tweet < ApplicationRecord
   belongs_to_active_hash :day
   belongs_to_active_hash :hour
 
-
   with_options presence: true do
     validates :image
     validates :price, format: { with:/\A[0-9]+\z/}

@@ -1,12 +1,5 @@
 <div class="tweet">
-  <%# <img src=”URL” alt=”文字” class=”セレクタ”> %>
-  <%# <div class="detail_btn_area">
-    <div class="detail_btn">
-      カテゴリー
-    </div>
-  </div> %>
   <ul class="tweet_list">
-  
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id),class: "tweets" do %>
     <li class="list">

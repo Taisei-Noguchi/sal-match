@@ -101,7 +101,6 @@ a {
   list-style: none;
 }
 
-
 .button {
   padding: 10px 10px;
   font-size: 20px;
@@ -211,7 +210,7 @@ a {
   height: 20px;
 }
 
-/* 投稿ボタン */
+
 .post_btn_area {
   width: 100%;
   text-align: center;
@@ -221,7 +220,7 @@ a {
 .post_btn {
   background: blue;
   color:white;
-  width: 40%;
+  width: 30%;
   height: 50px;
   font-size: 20px;
   margin: 0 auto;
