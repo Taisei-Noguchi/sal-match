@@ -21,6 +21,7 @@
       <div class="header_right">
         <ul class="header_list">
         <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, root_path,  class: "button" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "button" %></li>
           <li><%= link_to "投稿", new_tweet_path, class: "button" %></li>
         <% else %>
