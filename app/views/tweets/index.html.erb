@@ -19,12 +19,12 @@
           <%= tweet.hour.name %>
         </div>
         <div class="tweet_detail">
-          <span>都道府県：</span>
-          <%= tweet.prefecture.name %>
-        </div>
-        <div class="tweet_detail">
           <span>会場：</span>
           <%= tweet.place %>
+        </div>
+        <div class="tweet_detail">
+          <span>住所：</span>
+          <%= tweet.address %>
         </div>
         <div class="tweet_detail">
           <span>環境：</span>
@@ -43,8 +43,8 @@
           <%= tweet.category.name %>
         </div>
         <div class="tweet_detail">
-          <span>注意事項：</span>
-          <%= tweet.detail %>
+          <span>持ち物：</span>
+          <%= tweet.item %>
         </div>
       </div>      
     </li>
