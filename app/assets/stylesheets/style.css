@@ -75,7 +75,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
 }
 
 .SalMatch {
@@ -91,7 +90,6 @@ a {
   height: 80px;
   width: 320px;
   display: flex;
-  background-color: yellowgreen;
 }
 
 .header_list {
@@ -100,7 +98,6 @@ a {
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  background-color: yellow;
 }
 
 .button {

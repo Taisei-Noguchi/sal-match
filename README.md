@@ -92,7 +92,7 @@ tweetsテーブル
 | address         | string      | null: false                   |
 | price           | string      | null: false                   |
 | item            | string      | null: false                   |
-| category        | integer     | null: false                   |
+| category_id     | integer     | null: false                   |
 | field_id        | integer     | null: false                   |
 | level_id        | integer     | null: false                   |
 | month_id        | integer     | null: false                   |

@@ -77,7 +77,7 @@
   <% if @comments %>
     <% @comments.each do |comment| %>
       <p>
-        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"comment_name" %>：</strong>
+        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"comment_name", maxlength:"50" %>：</strong>
           <%= comment.text %>
       </p>
     <% end %>
