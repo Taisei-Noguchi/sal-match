@@ -7,7 +7,6 @@ class Tweet < ApplicationRecord
   has_one_attached :image
 
   belongs_to_active_hash :category
-  belongs_to_active_hash :prefecture
   belongs_to_active_hash :field
   belongs_to_active_hash :level
   belongs_to_active_hash :month
@@ -20,10 +19,11 @@ class Tweet < ApplicationRecord
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]/}do
       validates :title
       validates :place
+      validates :address
+      validates :item
     end
     with_options numericality: { other_than: 1 } do
       validates :category_id
-      validates :prefecture_id
       validates :field_id
       validates :level_id
       validates :month_id

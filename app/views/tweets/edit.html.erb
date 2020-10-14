@@ -30,6 +30,14 @@
       </div>
     </div>
 
+  <%# 住所 %>
+    <div class="post_center">
+      <div class="post_text">
+        <div>住所</div>
+        <p><%= f.text_area :address, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
+      </div>
+    </div>
+
     <%# 金額 %>
     <div class="post_center">
       <div class="post_text">
@@ -38,11 +46,11 @@
       </div>
     </div>
 
-    <%# 注意事項 %>
+    <%# 持ち物 %>
     <div class="post_center">
       <div class="post_text">
-        <div>注意事項</div>
-        <p><%= f.text_area :detail, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
+        <div>持ち物</div>
+        <p><%= f.text_area :item, class:"post_text_box", id:"item-name", placeholder:" ", maxlength:"15" %></p>
       </div>
     </div>
 
@@ -53,14 +61,6 @@
         <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"item-month"}) %>
         <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"select-box", id:"item-day"}) %>
         <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"item-hour"}) %>
-      </div>
-    </div>
-
-    <%# 都道府県 %>
-    <div class="post_center">
-      <div class="post_text">
-        <div>都道府県</div>
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
       </div>
     </div>
 

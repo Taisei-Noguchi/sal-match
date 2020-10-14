@@ -9,6 +9,5 @@ FactoryBot.define do
     first_kana            {"テスト"}
     second_kana           {"イチロウ"}
     birthday              {"2020-01-01"}
-
   end
 end
