@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: sal_match_production
-  username: sal_match
-  password: <%= ENV['SAL_MATCH_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
